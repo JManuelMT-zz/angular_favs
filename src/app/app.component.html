@@ -1,0 +1,22 @@
+<div class="container">
+  <header id="header">
+    <div class="title-subtitle">
+      <a [routerLink]="['/']" >
+        <img class="logo" src="assets/logoangular.png" alt="">
+      </a>
+      
+      <h1>{{title}}</h1>
+      <a [routerLink]="['/add_fav']"  class="btn-add-fav">Crear Marcador</a>
+      <p class="margin-left">{{description}} </p>   
+    </div>
+    <div class="clearfix"></div>
+  </header>
+  <section class="main">
+  <!-- este es otro compoente -->
+   
+    <router-outlet></router-outlet>
+  </section>
+</div>
+<footer>
+  &copy; Webapp Desarrollada por José Manuel Méndez Torres
+</footer>

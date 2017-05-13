@@ -1,0 +1,66 @@
+.btn-editar{
+    background: #0A0;
+    border-color: #59A600;
+}
+
+.btn-eliminar{
+    background: #E23237;
+    border-color: #F54747;
+}
+
+.btn-default{
+    background: #EAA615;
+    border-color: #CC941C;
+    color: white;
+    margin-left: 0px;
+}
+
+.fav-list{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.loading{
+    margin: 25px;
+}
+
+.fav-item{
+    list-style: none;
+    width: 260px;
+    border: 1px solid #ddd;
+    float: left;
+    height: 120px;
+    padding: 10px;
+    color: gray;
+    background: white;
+    margin: 10px;
+    margin-left: 3.2%;
+}
+
+.fav-item h4{
+    color: #444;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.fav-item .url{
+    margin: 0px;
+    margin-top: 3px;
+    padding: 0px;
+    margin-top: 5px;
+    height: 45px;
+    overflow: hidden;
+}
+
+.modal{
+    text-align: center;
+    background: white;
+    color: #C30E4A;
+    font-weight: bold;
+    margin-top: -72px;
+    min-height: 50px;
+    width: 260px;
+    position: relative;
+}

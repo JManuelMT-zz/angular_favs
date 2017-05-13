@@ -1,0 +1,50 @@
+
+<!--Cambiar color: <input type="text" [(ngModel)]="color" />
+<div class="container" [style.background]="color" [ngClass]="['bordeNegro', 'fondoA']">
+  <!--asi condiciones para ngClass "{bordeVerde: favoritosVisibles,
+bordeNegro: !favoritosVisible }" -->
+<!--  <button (click)="showFavs()" *ngIf="favoritosVisibles == false">Mostrar favoritos</button>
+  <button (click)="hideFavs()" *ngIf="favoritosVisibles == true">Ocultar favoritos</button>
+  <ul id="favoritos" *ngIf="favoritosVisibles == true">
+    <li *ngFor="let favorito of favoritos">{{favorito}}</li>
+  </ul>
+</div>-->
+
+
+
+
+<!-- Aqui empezamos -->
+<div class="loading" *ngIf="loading">
+  <img src="assets/loader.gif" alt="">
+</div>
+  <ul class="fav-list" *ngIf="favoritos">
+    <li *ngFor="let favorito of favoritos" class="fav-item">
+      <div class="content-data">
+          <h4>{{favorito.title}}</h4>
+          <p class="url">{{favorito.url}}</p>
+          <p class="buttons">
+            <a href="{{favorito.url}}" target="_blank" class="btn btn-default">
+              Ir al marcador
+            </a>
+            <a [routerLink]="['/favdetail', favorito._id]"   class="btn btn-ver">
+            Ver
+            </a>
+            <a [routerLink]="['/edit_fav', favorito._id]"   class="btn btn-editar">
+              Editar
+            </a>
+            <a (click)="onDeleteConfirm(favorito._id)"  class="btn btn-eliminar">
+              Eliminar
+            </a>
+          </p>
+          <div class="modal" *ngIf="confirmado== favorito._id">
+                <p>Estas seguro de querer eliminar el favorito?</p>
+                <a (click)="deleteFav(favorito._id)"   class="btn btn-eliminar">
+                  Eliminar
+                </a>
+                <a (click)="onCancelConfirm(favorito._id)" class="btn btn-ver">
+                  Cancelar
+                </a>
+            </div>
+      </div>
+    </li>
+  </ul>

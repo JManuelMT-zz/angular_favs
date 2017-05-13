@@ -1,0 +1,29 @@
+<div class="fav-box">
+  <div class="form-cont">
+    <h1>{{titleSection}}</h1>
+    <form #formFavorito="ngForm" (ngSubmit)="onSubmit()" >
+      <label>Titulo:</label>
+      <div>
+        <input type="text" class="custom-input" name="title" #title="ngModel" [(ngModel)]="favorito.title" required />
+        <span *ngIf="title.touched && !title.valid">
+          El titulo no puede estar vacio!
+        </span>
+      </div>
+      <label>Url:</label>
+      <div>
+        <input class="custom-input" type="url" name="url" #url="ngModel" [(ngModel)]="favorito.url" required />
+      <span *ngIf="url.touched && !url.valid">
+          La url esta vacia o no es valida, por favor corrija
+      </span>
+      </div>
+      <label>Descripción:</label>
+      <div>
+        <textarea class="custom-input" name="description" #description="ngModel" [(ngModel)]="favorito.description"  required ></textarea>
+        <span *ngIf="description.touched && !description.valid">
+          La descripción no puede estar vacia!
+        </span>
+      </div>
+        <input class="btn-submit" type="submit" value="{{titleSection}}">
+    </form>
+  </div>
+</div>
